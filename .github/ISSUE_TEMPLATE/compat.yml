@@ -1,0 +1,84 @@
+name: 兼容性测试
+description: 报告某个系统版本上应用能否正常使用
+title: "[Compat]: "
+labels: ["compat"]
+body:
+  - type: markdown
+    attributes:
+      value: 测试日期以本 Issue 的创建日期为准。
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: 系统版本
+      placeholder: Android 14 / iOS 17
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 机型
+      placeholder: Pixel 7 / iPhone 13
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App 版本或 commit
+      placeholder: 0.5.0-beta.1 或 commit SHA
+    validations:
+      required: true
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: 结果
+      options:
+        - 通过
+        - 失败
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot-os
+    attributes:
+      label: 系统版本截图
+      description: 拖入 Android 或 iOS 系统版本页面的截图
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot-updates
+    attributes:
+      label: 登录页截图
+      description: 拖入「登录页」页的截图
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot-updates
+    attributes:
+      label: 最近更新截图
+      description: 拖入「最近更新」页的截图
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot-comments
+    attributes:
+      label: 评论区截图
+      description: 拖入「评论区」页的截图 (要有一条 3 天内的评论)
+    validations:
+      required: false

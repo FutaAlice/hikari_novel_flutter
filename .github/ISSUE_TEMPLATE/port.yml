@@ -1,0 +1,38 @@
+name: 合并已有功能
+description: 合并 15dd 已有功能，或其他 Star 较多、经过广泛测试的 fork
+title: "[Port]: "
+labels: ["port"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        主要用于合并 [15dd](https://github.com/15dd/hikari_novel_flutter) 源仓库里已经存在的功能。
+        其余 fork 只接受有用户几处经过广泛测试的。
+        新功能请改用 Feature 模板。
+        维护者同意后再从 `dev` 拉分支，PR 合并回 `dev`。
+
+  - type: dropdown
+    id: origin
+    attributes:
+      label: 来源
+      options:
+        - 15dd
+        - 其他 Star 较多且经过广泛测试的 fork
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: 链接
+      description: PR、commit 或仓库地址
+      placeholder: https://github.com/15dd/hikari_novel_flutter/pull/1
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 要合并的功能
+    validations:
+      required: true

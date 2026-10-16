@@ -1,0 +1,31 @@
+name: 新功能
+description: 提议一个新功能
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这里只提议新功能。
+        维护者同意后再从 `dev` 拉分支，PR 合并回 `dev`。
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 想做什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: how
+    attributes:
+      label: 打算怎么改
+    validations:
+      required: false

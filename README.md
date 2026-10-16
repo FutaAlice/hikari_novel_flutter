@@ -1,23 +1,17 @@
-### 📣自0.2.0版本开始，本软件开始转为使用网页源，放弃了mewx源📣
-### ⚠️我还要说明一点，如果你编译出来了，就自己用，不要发到其他地方。分享欲再旺盛也别发，你这是在害我们，老版的Hikari Novel就是一个例子。不要让我把这个项目也关停了，大家到时候都别用！⚠️
+### ⚠️2026.10.16 更新说明: 模拟 Chrome 浏览器 TLS, 绕过 Cloudflare 403
+### ⚠️本仓库维护者只修 bug。要在这里做新功能，先开 [Issue](https://github.com/FutaAlice/hikari_novel_flutter/issues/new?template=feature.yml) 商量方向和范围。单纯请求新功能，请到 [15dd](https://github.com/15dd/hikari_novel_flutter/issues) 仓库。
+### ⚠️自0.2.0版本开始，本软件开始转为使用网页源，放弃了mewx源
+### ⚠️原作者不希望分享编译产物。编译出来只供自己使用，不要到处分享。网站做反扒会让 App 体验变差。奥さん、你也不想翻页等两秒还要输验证码吧？
 
 <hr>
 
-<div align="center">
-
-  <div align="center">
-    <img src="./assets/images/logo_transparent.png" alt="Logo" height="250">
-  </div>
-
 # Hikari Novel
 
-  <p align="center"><font>使用Flutter构建的第三方轻小说文库客户端</font></p>
+使用Flutter构建的第三方轻小说文库客户端
 
-  <div>
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/15dd/hikari_novel_flutter?style=for-the-badge&color=%23408A23">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-Green?style=for-the-badge&color=rgb(164%2C25%2C49)">
-  </div>
-
+<div>
+  <img alt="GitHub Release" src="https://img.shields.io/github/v/release/FutaAlice/hikari_novel_flutter?style=for-the-badge&color=%23408A23">
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-Green?style=for-the-badge&color=rgb(164%2C25%2C49)">
 </div>
 
 
@@ -31,15 +25,19 @@
 
 
 ## 📱 支持平台
-| 平台      | 最小支持版本  | 备注                               |
-|----------|-------------|------------------------------------|
-| Android  | 6.0         | -                                  |
-| iOS      | N/A         | 理论上支持，未测试                    |
-| macOS    | N/A         | 理论上支持，未测试。未对键鼠操作进行适配  |
-| Windows  | 10          | 未对键鼠操作进行适配，处于半可用状态     |
-| Linux    | 不支持       | -                                  |
-| Web      | 不支持       | -                                  |
 
+| 平台     | 系统版本 | 测试日期    | 提交/版本号 |
+|----------|-------- |------------|------------|
+| Android  | 13      | 2026.10.13 | 0.6.0      |
+| iOS      | N/A     |            |            |
+
+其他版本请开 Issue，选择「[兼容性测试](https://github.com/FutaAlice/hikari_novel_flutter/issues/new?template=compat.yml)」。
+
+填写平台、系统版本、机型、App 版本或 commit，并附上系统版本截图。
+
+登录页、最近更新、评论区(含一条3天内的评论) 的截图。
+
+测试日期以 Issue 创建日期为准。
 
 ## 🖼️ 软件截图
 - 手机
@@ -54,8 +52,16 @@
 
 
 ## ⛓️ 分支介绍
-- `main` 主分支。发布版本用
-- `develop` 开发分支。想要提pr的人请拉取这个分支进行开发，然后提pr时也请merge到这个分支
+
+- `master` 主分支, 发布版本用.
+- `dev` 开发分支, 开发用.
+- `main` / `develop` 保留, 用于从 [15dd](https://github.com/15dd/hikari_novel_flutter) 源仓库同步
+
+新功能请开 Issue，选择「[新功能](https://github.com/FutaAlice/hikari_novel_flutter/issues/new?template=feature.yml)」。
+
+从 15dd 或其他经过广泛测试的 fork 合并已有功能，选择「[合并已有功能](https://github.com/FutaAlice/hikari_novel_flutter/issues/new?template=port.yml)」。
+
+维护者同意后再从 `dev` 拉分支，PR 合并回 `dev`。
 
 
 ## 📦 安装
@@ -97,8 +103,6 @@
   3. 准备 Rust 网络层的编译工具。Android 见 [DEVELOPMENT.android.md](./readme/DEVELOPMENT.android.md)，iOS 见 [DEVELOPMENT.ios.md](./readme/DEVELOPMENT.ios.md)
   4. 编译出对应平台的安装包，如 `flutter build apk`
 
-- ##### 警告
-  ⚠️我要说明一点，如果你编译出来了，就自己用，不要发到其他地方。分享欲再旺盛也别发，你这是在害我们，老版的Hikari Novel就是一个例子。不要让我把这个项目也关停了，大家到时候都别用！⚠️
 
 ## 🧑‍💻 交流
 &nbsp;&nbsp;<a href="https://t.me/+CUSABNkX5U83NGNl"><img alt="Static Badge" src="https://img.shields.io/badge/Telegram-加入群组-blue?style=for-the-badge&logo=telegram"></a>

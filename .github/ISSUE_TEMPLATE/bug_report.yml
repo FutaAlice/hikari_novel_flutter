@@ -1,0 +1,42 @@
+name: 缺陷报告
+description: 闪退、界面、缓存、阅读进度、编译失败
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 现象与复现
+      description: 实际行为、预期行为、复现步骤
+      placeholder: |
+        1. 打开…
+        2. 点击…
+        3. 出现…
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: 系统版本
+      placeholder: Android 14 / iOS 17
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App 版本或 commit
+      placeholder: 0.5.0-beta.1 或 commit SHA
+    validations:
+      required: true

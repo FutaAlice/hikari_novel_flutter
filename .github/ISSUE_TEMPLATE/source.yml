@@ -1,0 +1,41 @@
+name: 网页源异常
+description: 403、书库打不开、目录或正文解析失败
+title: "[Source]: "
+labels: ["source"]
+body:
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: 现象
+      options:
+        - 403
+        - 书库或页面打不开
+        - 目录或正文解析失败
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App 版本或 commit
+      placeholder: 0.5.0-beta.1 或 commit SHA
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: 书目或页面
+      placeholder: 书名、书籍 ID 或页面地址
+    validations:
+      required: true
